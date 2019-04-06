@@ -1,0 +1,217 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : fft_top
+Version: I-2013.12-SP3
+Date   : Thu Jan 10 11:05:33 2019
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_v1p08_125c   Library: scc65nll_hs_rvt_ss_v1p08_125c_ccs
+Wire Load Model Mode: top
+
+  Startpoint: p2/data_out_im_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m0/data_out_re_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.10       0.10
+  p2/data_out_im_reg[2]/CK (DRNQHSV2)      0.00 #     0.10 r
+  p2/data_out_im_reg[2]/Q (DRNQHSV2)       0.27       0.37 f
+  U13886/Z (BUFHSV2)                       0.11       0.48 f
+  U13652/ZN (NOR2HSV0)                     0.14       0.62 r
+  U17661/ZN (NOR2HSV2)                     0.07       0.69 f
+  U17665/ZN (CLKNAND2HSV1)                 0.05       0.74 r
+  U17668/ZN (NAND2HSV2)                    0.07       0.81 f
+  U17669/Z (BUFHSV2)                       0.12       0.93 f
+  U13712/ZN (XNOR2HSV2)                    0.18       1.10 r
+  U18359/ZN (NOR2HSV0)                     0.06       1.16 f
+  U18360/ZN (INHSV1)                       0.06       1.22 r
+  U18362/ZN (AOI21HSV4)                    0.07       1.29 f
+  U18366/ZN (OAI21HSV4)                    0.09       1.37 r
+  U18408/ZN (XNOR2HSV1)                    0.14       1.51 f
+  U19632/CO (AD1HSV1)                      0.33       1.84 f
+  U19592/CO (AD1HSV1)                      0.19       2.03 f
+  U19686/CO (AD1HSV1)                      0.19       2.22 f
+  U19719/CO (AD1HSV1)                      0.19       2.41 f
+  U19549/CO (AD1HSV1)                      0.19       2.60 f
+  U13685/CO (AD1HSV1)                      0.19       2.79 f
+  U19169/CO (AD1HSV1)                      0.19       2.98 f
+  U19299/CO (AD1HSV1)                      0.20       3.17 f
+  U19404/Z (AO22HSV4)                      0.16       3.34 f
+  U19821/ZN (AOI22HSV2)                    0.07       3.41 r
+  U19822/ZN (INHSV2)                       0.06       3.47 f
+  U19825/ZN (AOI22HSV2)                    0.07       3.55 r
+  U10969/ZN (INHSV2)                       0.08       3.62 f
+  U14051/ZN (AOI21HSV2)                    0.12       3.74 r
+  U19962/ZN (XNOR2HSV1)                    0.16       3.90 f
+  U19963/ZN (NAND2HSV2)                    0.05       3.95 r
+  U10983/ZN (NAND3HSV2)                    0.08       4.03 f
+  U21825/ZN (INHSV2)                       0.06       4.09 r
+  U13739/ZN (CLKNAND2HSV4)                 0.07       4.15 f
+  U14008/ZN (MOAI22HSV2)                   0.12       4.27 f
+  U13788/ZN (MUX2NHSV2)                    0.08       4.35 r
+  U25304/ZN (INHSV2)                       0.05       4.40 f
+  U25305/ZN (NAND2HSV2)                    0.04       4.43 r
+  U25306/ZN (NAND2HSV2)                    0.06       4.50 f
+  U25310/ZN (INAND2HSV4)                   0.11       4.60 f
+  U13738/ZN (INHSV4)                       0.04       4.64 r
+  U25312/ZN (OAI21HSV4)                    0.06       4.69 f
+  U13937/Z (AO21HSV1)                      0.14       4.83 f
+  U13796/ZN (OAI211HSV2)                   0.04       4.87 r
+  m0/data_out_re_reg[15]/D (DRNQHSV2)      0.00       4.87 r
+  data arrival time                                   4.87
+
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.10       5.10
+  clock uncertainty                       -0.10       5.00
+  m0/data_out_re_reg[15]/CK (DRNQHSV2)     0.00       5.00 r
+  library setup time                      -0.13       4.87
+  data required time                                  4.87
+  -----------------------------------------------------------
+  data required time                                  4.87
+  data arrival time                                  -4.87
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: p2/data_out_re_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m0/data_out_im_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.10       0.10
+  p2/data_out_re_reg[4]/CK (DRNQHSV2)      0.00 #     0.10 r
+  p2/data_out_re_reg[4]/Q (DRNQHSV2)       0.27       0.37 r
+  U13831/ZN (CLKNHSV0)                     0.13       0.51 f
+  U18918/ZN (INHSV2)                       0.25       0.75 r
+  U20273/Z (BUFHSV2)                       0.21       0.97 r
+  U20287/CO (AD1HSV2)                      0.42       1.39 r
+  U20288/CO (AD1HSV4)                      0.17       1.56 r
+  U20289/CO (AD1HSV4)                      0.16       1.72 r
+  U21311/CO (AD1HSV2)                      0.17       1.89 r
+  U21258/CO (AD1HSV2)                      0.16       2.05 r
+  U21282/CO (AD1HSV2)                      0.16       2.22 r
+  U21357/CO (AD1HSV2)                      0.16       2.38 r
+  U21376/CO (AD1HSV2)                      0.16       2.55 r
+  U21421/CO (AD1HSV2)                      0.16       2.71 r
+  U21434/CO (AD1HSV2)                      0.16       2.88 r
+  U21186/CO (AD1HSV2)                      0.16       3.04 r
+  U21471/CO (AD1HSV2)                      0.16       3.20 r
+  U21564/CO (AD1HSV2)                      0.16       3.36 r
+  U13872/Z (AO22HSV2)                      0.14       3.51 r
+  U10970/CO (AD1HSV1)                      0.17       3.68 r
+  U21785/ZN (INHSV4)                       0.04       3.71 f
+  U21786/Z (CLKAND2HSV2)                   0.08       3.79 f
+  U21829/ZN (AOI21HSV2)                    0.06       3.85 r
+  U21830/ZN (CLKNAND2HSV1)                 0.06       3.91 f
+  U21831/ZN (NOR2HSV2)                     0.09       4.00 r
+  U12595/ZN (NAND3HSV2)                    0.12       4.12 f
+  U21880/ZN (INHSV2)                       0.09       4.21 r
+  U21881/ZN (NOR2HSV1)                     0.06       4.27 f
+  U21882/ZN (NOR2HSV0)                     0.09       4.36 r
+  U21927/ZN (AOI21HSV2)                    0.09       4.46 f
+  U11034/ZN (XNOR2HSV1)                    0.16       4.61 r
+  U22016/ZN (OAI211HSV1)                   0.09       4.70 f
+  U13116/ZN (AOI21HSV0)                    0.09       4.79 r
+  U13118/ZN (OAI211HSV0)                   0.10       4.89 f
+  m0/data_out_im_reg[14]/D (DRNQHSV1)      0.00       4.89 f
+  data arrival time                                   4.89
+
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.10       5.10
+  clock uncertainty                       -0.10       5.00
+  m0/data_out_im_reg[14]/CK (DRNQHSV1)     0.00       5.00 r
+  library setup time                      -0.11       4.89
+  data required time                                  4.89
+  -----------------------------------------------------------
+  data required time                                  4.89
+  data arrival time                                  -4.89
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: p2/data_out_im_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m0/data_out_re_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.10       0.10
+  p2/data_out_im_reg[2]/CK (DRNQHSV2)      0.00 #     0.10 r
+  p2/data_out_im_reg[2]/Q (DRNQHSV2)       0.27       0.37 f
+  U13886/Z (BUFHSV2)                       0.11       0.48 f
+  U13652/ZN (NOR2HSV0)                     0.14       0.62 r
+  U17661/ZN (NOR2HSV2)                     0.07       0.69 f
+  U17665/ZN (CLKNAND2HSV1)                 0.05       0.74 r
+  U17668/ZN (NAND2HSV2)                    0.07       0.81 f
+  U17669/Z (BUFHSV2)                       0.12       0.93 f
+  U17687/ZN (AOI21HSV2)                    0.10       1.03 r
+  U17690/Z (CLKXOR2HSV4)                   0.15       1.18 f
+  U18364/ZN (NOR2HSV2)                     0.09       1.27 r
+  U18409/ZN (CLKNHSV0)                     0.07       1.34 f
+  U13264/ZN (AOI21HSV0)                    0.10       1.44 r
+  U13265/Z (AO31HSV0)                      0.12       1.56 r
+  U13266/Z (AND2HSV0)                      0.14       1.70 r
+  U19632/CO (AD1HSV1)                      0.18       1.88 r
+  U19592/CO (AD1HSV1)                      0.19       2.06 r
+  U19686/CO (AD1HSV1)                      0.18       2.25 r
+  U19719/CO (AD1HSV1)                      0.18       2.43 r
+  U19549/CO (AD1HSV1)                      0.18       2.61 r
+  U13685/CO (AD1HSV1)                      0.19       2.80 r
+  U19169/CO (AD1HSV1)                      0.19       2.99 r
+  U19299/CO (AD1HSV1)                      0.20       3.18 r
+  U19404/Z (AO22HSV4)                      0.14       3.32 r
+  U19821/ZN (AOI22HSV2)                    0.06       3.37 f
+  U19822/ZN (INHSV2)                       0.07       3.44 r
+  U19825/ZN (AOI22HSV2)                    0.05       3.50 f
+  U10969/ZN (INHSV2)                       0.10       3.60 r
+  U14051/ZN (AOI21HSV2)                    0.09       3.69 f
+  U20017/Z (AND2HSV0)                      0.12       3.81 f
+  U20018/ZN (NAND2HSV2)                    0.06       3.87 r
+  U10972/ZN (NAND3HSV2)                    0.09       3.96 f
+  U21857/ZN (AOI21HSV2)                    0.08       4.03 r
+  U13649/ZN (IOA21HSV2)                    0.08       4.11 f
+  U13648/ZN (CLKNHSV4)                     0.06       4.17 r
+  U13653/ZN (OAI22HSV4)                    0.06       4.23 f
+  U25315/ZN (MUX2NHSV1)                    0.09       4.32 r
+  U13687/Z (XOR2HSV0)                      0.17       4.49 f
+  U13936/Z (OR2HSV1)                       0.14       4.63 f
+  U13801/ZN (NAND2HSV2)                    0.04       4.67 r
+  U13934/Z (XOR2HSV0)                      0.16       4.83 f
+  U25371/ZN (OAI211HSV2)                   0.04       4.87 r
+  m0/data_out_re_reg[14]/D (DRNQHSV2)      0.00       4.87 r
+  data arrival time                                   4.87
+
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.10       5.10
+  clock uncertainty                       -0.10       5.00
+  m0/data_out_re_reg[14]/CK (DRNQHSV2)     0.00       5.00 r
+  library setup time                      -0.13       4.87
+  data required time                                  4.87
+  -----------------------------------------------------------
+  data required time                                  4.87
+  data arrival time                                  -4.87
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

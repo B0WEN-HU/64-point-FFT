@@ -1,0 +1,107 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 3
+Design : fft_top
+Version: I-2013.12-SP3
+Date   : Wed Jan  9 21:46:21 2019
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_v1p08_125c   Library: scc65nll_hs_rvt_ss_v1p08_125c_ccs
+Wire Load Model Mode: top
+
+  Startpoint: data_in_re[4]
+              (input port clocked by clk)
+  Endpoint: i0/data_out_re_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.10       0.10
+  input external delay                    -0.01       0.09 f
+  data_in_re[4] (in)                       0.01       0.10 f
+  U14762/Z (MUX2HSV0)                      0.12       0.22 f
+  i0/data_out_re_reg[4]/D (DRNHSV2)        0.00       0.22 f
+  data arrival time                                   0.22
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.10       0.10
+  clock uncertainty                        0.10       0.20
+  i0/data_out_re_reg[4]/CK (DRNHSV2)       0.00       0.20 r
+  library hold time                        0.01       0.21
+  data required time                                  0.21
+  -----------------------------------------------------------
+  data required time                                  0.21
+  data arrival time                                  -0.22
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: data_in_re[7]
+              (input port clocked by clk)
+  Endpoint: i0/data_out_re_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.10       0.10
+  input external delay                    -0.01       0.09 f
+  data_in_re[7] (in)                       0.01       0.10 f
+  U14760/Z (MUX2HSV0)                      0.12       0.22 f
+  i0/data_out_re_reg[7]/D (DRNHSV2)        0.00       0.22 f
+  data arrival time                                   0.22
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.10       0.10
+  clock uncertainty                        0.10       0.20
+  i0/data_out_re_reg[7]/CK (DRNHSV2)       0.00       0.20 r
+  library hold time                        0.01       0.21
+  data required time                                  0.21
+  -----------------------------------------------------------
+  data required time                                  0.21
+  data arrival time                                  -0.22
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: data_in_im[0]
+              (input port clocked by clk)
+  Endpoint: i0/data_out_im_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.10       0.10
+  input external delay                    -0.01       0.09 f
+  data_in_im[0] (in)                       0.01       0.10 f
+  U14736/Z (MUX2HSV0)                      0.12       0.22 f
+  i0/data_out_im_reg[0]/D (DRNHSV2)        0.00       0.22 f
+  data arrival time                                   0.22
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.10       0.10
+  clock uncertainty                        0.10       0.20
+  i0/data_out_im_reg[0]/CK (DRNHSV2)       0.00       0.20 r
+  library hold time                        0.01       0.21
+  data required time                                  0.21
+  -----------------------------------------------------------
+  data required time                                  0.21
+  data arrival time                                  -0.22
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+1

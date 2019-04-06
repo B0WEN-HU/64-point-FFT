@@ -1,0 +1,53 @@
+Loading db file '/net/dellr900b/export/SMIC_65nm_LL/SCC65NLL_HS/SCC65NLL_HS_RVT_syn_V1.1a/SCC65NLL_HS_RVT_V1p1a/synopsys/1.2v/scc65nll_hs_rvt_ss_v1p08_125c_ccs.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fft_top
+Version: I-2013.12-SP3
+Date   : Wed Jan  9 21:46:33 2019
+****************************************
+
+
+Library(s) Used:
+
+    scc65nll_hs_rvt_ss_v1p08_125c_ccs (File: /net/dellr900b/export/SMIC_65nm_LL/SCC65NLL_HS/SCC65NLL_HS_RVT_syn_V1.1a/SCC65NLL_HS_RVT_V1p1a/synopsys/1.2v/scc65nll_hs_rvt_ss_v1p08_125c_ccs.db)
+
+
+Operating Conditions: ss_v1p08_125c   Library: scc65nll_hs_rvt_ss_v1p08_125c_ccs
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  =   3.7930 mW   (99%)
+  Net Switching Power  =  21.3728 uW    (1%)
+                         ---------
+Total Dynamic Power    =   3.8144 mW  (100%)
+
+Cell Leakage Power     =  43.9404 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           3.7789        3.4535e-03           20.6082            3.8030  (  98.57%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  1.4083e-02        1.7919e-02           23.3322        5.5334e-02  (   1.43%)
+--------------------------------------------------------------------------------------------------
+Total              3.7930 mW     2.1373e-02 mW        43.9404 uW         3.8583 mW
+1

@@ -1,0 +1,82 @@
+`timescale 1ns/10ps
+`define INPUT_FILE 	"rand_in.txt"
+`define OUTPUT_FILE	"rand_out.txt"
+
+module top_tb;
+reg clk;
+reg rst_n;
+reg start;
+reg signed [9:0] data_in_re;
+reg signed [9:0] data_in_im;
+wire signed [16:0] data_out_re;
+wire signed [16:0] data_out_im;
+wire done;
+
+reg signed [9:0] data_mem [127:0];
+
+integer i, j, fid;
+
+always #5 clk = !clk;
+
+initial
+	begin
+		clk = 0;
+		rst_n = 0;
+		start = 0;
+		i = 0;
+		//reset the system
+		repeat(4) @(posedge clk);
+		rst_n = 1;
+		repeat(4) @(posedge clk);
+		
+		$display("FFT64 simulation begins...");
+		
+		//read the test vector, the first 64 group is the real part, the second 64 group is the image part
+		$readmemh("D:\dsp VLSI\rand_in.txt", data_mem);
+		$display("Read the test vectors from the local file");
+		
+		//enable the signal input
+		$display("Begin input the test vectors...");
+		start = 1;
+		for( i = 0; i < 64; i = i + 1)
+			begin
+				data_in_re = data_mem[i];
+				data_in_im = data_mem[64 + i];
+				repeat(1) @(posedge clk);
+			end
+		start = 0;
+		$display("Inputting test vectors is done!");
+	end
+	
+initial
+	begin
+		j = 0;
+		fid = $fopen(`OUTPUT_FILE);
+		
+		//while(done != 1) @(posedge clk);
+		wait( done == 1);
+		$display("Begin outputting the result...");
+		repeat(1) @(posedge clk);
+		for( j = 0; j<64; j = j + 1)
+			begin
+				$fdisplay(fid,"%d %d",data_out_re,data_out_im);
+				repeat(1) @(posedge clk);
+			end
+		$display("Outputting result is done!");
+		$display("FFT64 simulation is over!");
+		$fclose( fid );
+	end
+
+
+
+fft_top top_test(
+				.clk(clk),
+				.rst_n(rst_n),
+				.data_in_en(start),
+				.data_in_re(data_in_re),
+				.data_in_im(data_in_im),
+				.data_out_re(data_out_re),
+				.data_out_im(data_out_im),
+				.data_out_en(done));
+				
+endmodule

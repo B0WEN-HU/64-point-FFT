@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : fft_top
+Version: I-2013.12-SP3
+Date   : Wed Jan  9 21:46:20 2019
+****************************************
+
+Library(s) Used:
+
+    scc65nll_hs_rvt_ss_v1p08_125c_ccs (File: /net/dellr900b/export/SMIC_65nm_LL/SCC65NLL_HS/SCC65NLL_HS_RVT_syn_V1.1a/SCC65NLL_HS_RVT_V1p1a/synopsys/1.2v/scc65nll_hs_rvt_ss_v1p08_125c_ccs.db)
+
+Number of ports:                           58
+Number of nets:                         16772
+Number of cells:                        16469
+Number of combinational cells:          12367
+Number of sequential cells:              4101
+Number of macros/black boxes:               0
+Number of buf/inv:                       2920
+Number of references:                     107
+
+Combinational area:              42665.040250
+Buf/Inv area:                     4503.600179
+Noncombinational area:           37234.439964
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 79899.480214
+Total area:                 undefined
+1
